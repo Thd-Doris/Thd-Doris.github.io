@@ -1,148 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hua Tang | Academic Homepage</title>
-
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tang Hua — Translation postgraduate student at Xihua University.">
+<title>Tang Hua | Academic Homepage</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 25px;
-    line-height: 1.7;
-    color: #333;
-}
-
-header {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
-}
-
-h1 { color: #17365d; }
-
-h2 {
-    color: #17365d;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 6px;
-    margin-top: 35px;
-}
-
-a {
-    color: #1769aa;
-    text-decoration: none;
-}
-
-a:hover { text-decoration: underline; }
-
-nav {
-    margin: 20px 0;
-}
-
-nav a {
-    margin-right: 20px;
-}
-
-.profile {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.profile img {
-    width: 160px;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-@media(max-width:600px) {
-    .profile { flex-direction: column; align-items: flex-start; }
-}
+:root{--green:#24584d;--dark:#173b35;--mint:#e9f1ec;--bg:#f7f7f2;--ink:#20312e;--muted:#667773;--line:#dce5df;--gold:#c59b56}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,"Segoe UI",Arial,sans-serif}
+a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1080px;margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:#f7f7f2ed;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:14px max(24px,calc((100vw - 1032px)/2));gap:20px}
+.brand{font-weight:800;letter-spacing:.08em;color:var(--dark)}.links{display:flex;gap:20px;flex-wrap:wrap}.links a{font-size:.9rem;color:var(--muted);font-weight:600}
+.hero{padding:78px 0;background:radial-gradient(circle at 85% 15%,#c59b562e,transparent 27%),linear-gradient(135deg,#edf3ee,#f8f7f1);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:48px;align-items:center}.eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:800}
+h1{font-size:clamp(2.8rem,6vw,4.6rem);line-height:1.05;letter-spacing:-.05em;color:var(--dark);margin:12px 0}.role{font-size:1.15rem;color:var(--muted);margin:18px 0}.intro{max-width:650px;color:#435651;font-size:1.05rem}
+.btn{display:inline-block;border:1px solid var(--green);border-radius:30px;padding:10px 17px;margin:12px 8px 0 0;font-weight:700}.primary{background:var(--green);color:white}.secondary{color:var(--green)}
+.profile{background:#ffffffc9;border:1px solid var(--line);border-radius:24px;padding:28px;text-align:center;box-shadow:0 18px 45px #1a3b3112}
+.avatar{width:132px;height:132px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(145deg,var(--green),#8ba99a);border:7px solid #f0f4ef;color:white;display:grid;place-items:center;font-size:3rem;font-weight:800}
+.profile strong{display:block;color:var(--dark);font-size:1.15rem}.profile small{color:var(--muted)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:20px;text-align:left}.fact{background:var(--mint);border-radius:12px;padding:10px}.fact small{display:block;text-transform:uppercase;font-size:.68rem;letter-spacing:.08em}.fact b{font-size:.85rem;color:var(--dark)}
+section{padding:66px 0}.tint{background:#f0f4ef}.head{margin-bottom:26px}h2{margin:0;color:var(--dark);font-size:2.1rem;letter-spacing:-.03em}.lead{color:var(--muted);max-width:700px;margin:8px 0 0}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card,.item,.cert{background:white;border:1px solid var(--line);border-radius:17px;padding:22px}.card h3,.item h3{margin:0 0 6px;color:var(--dark)}.card p,.item p{margin:0;color:var(--muted)}
+.timeline{display:grid;gap:14px}.item{display:grid;grid-template-columns:170px 1fr;gap:20px}.date{color:var(--gold);font-weight:800;font-size:.9rem}.place{font-weight:600;color:var(--muted);margin-bottom:7px}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.tag{background:var(--mint);border:1px solid #d8e6dc;color:var(--green);border-radius:22px;padding:6px 12px;font-size:.85rem;font-weight:700}
+.certs{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.cert{text-align:center}.cert b{display:block;color:var(--green);font-size:1.15rem}.cert span{color:var(--muted);font-size:.82rem}
+.contact{background:var(--dark);color:white;border-radius:22px;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:20px}.contact h2{color:white}.contact p{color:#d0ddd7}.contact a{color:white}
+footer{text-align:center;color:#81908b;padding:30px;font-size:.85rem}
+@media(max-width:740px){nav{align-items:flex-start;flex-direction:column}.links{gap:12px}.hero-grid,.cards{grid-template-columns:1fr}.hero{padding:52px 0}.profile{max-width:430px}.item{grid-template-columns:1fr;gap:5px}.certs{grid-template-columns:1fr 1fr}.contact{align-items:flex-start;flex-direction:column}}
+@media(max-width:420px){.wrap{padding:0 17px}.certs{grid-template-columns:1fr}}
 </style>
 </head>
-
 <body>
-
-<header>
-    <h1>Hua Tang</h1>
-    <p>Lecturer | Xihua University</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<section id="about">
-    <h2>About Me</h2>
-    <div class="profile">
-        <img src="photo.jpg" alt="Profile Photo">
-        <div>
-            <p>
-                Welcome to my personal homepage!
-                I am a researcher interested in machine learning,
-                artificial intelligence and image processing.
-            </p>
-            <p>
-                My research focuses on multimodal remote sensing
-                image analysis and deep learning.
-            </p>
-            <p>Email: your-email@example.com</p>
-        </div>
-    </div>
-</section>
-
-<section id="research">
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Machine Learning</li>
-        <li>Deep Learning</li>
-        <li>Multimodal Remote Sensing Image Analysis</li>
-        <li>Image Clustering</li>
-    </ul>
-</section>
-
-<section id="publications">
-    <h2>Selected Publications</h2>
-    <ol>
-        <li>Paper Title 1, Journal Name, 2026.</li>
-        <li>Paper Title 2, Journal Name, 2025.</li>
-        <li>Paper Title 3, Journal Name, 2024.</li>
-    </ol>
-</section>
-
-<section id="projects">
-    <h2>Research Projects</h2>
-    <ul>
-        <li>Research Project 1</li>
-        <li>Research Project 2</li>
-    </ul>
-</section>
-
-<section id="awards">
-    <h2>Honors and Awards</h2>
-    <ul>
-        <li>Outstanding Doctoral Dissertation, 2025</li>
-        <li>National Scholarship, 2022</li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your-email@example.com</p>
-    <p>GitHub: <a href="https://github.com/">GitHub Profile</a></p>
-</section>
-
-<footer>
-    <hr>
-    <p>© 2026 Shujun Liu. All Rights Reserved.</p>
-</footer>
-
-</body>
-</html>
+<nav><a class="brand" href="#home">TANG HUA</a><div class="links"><a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#qualifications">Qualifications</a><a href="#contact">Contact</a></div></nav>
+<header class="hero" id="home"><div class="wrap hero-grid"><div><div class="eyebrow">Academic & Professional Profile</div><h1>Tang Hua</h1><div class="role">MA Student in Translation · Xihua University</div><p class="intro">Welcome to my personal homepage. I am a postgraduate student in Translation at Xihua University, with previous experience in English teaching and school-based work. I value clear communication, careful work, and continuous learning.</p><a class="btn primary" href="#experience">View Experience ↗</a><a class="btn secondary" href="mailto:1348271063@qq.com">Email Me</a></div><aside class="profile"><div class="avatar">TH</div><strong>Tang Hua</strong><small>Translation · Language Education</small><div class="facts"><div class="fact"><small>University</small><b>Xihua University</b></div><div class="fact"><small>Program</small><b>Translation</b></div><div class="fact"><small>Campus Role</small><b>Study Committee Member</b></div><div class="fact"><small>Interest</small><b>Reading Fiction</b></div></div></aside></div></header>
+<main>
+<section id="about"><div class="wrap"><div class="head"><div class="eyebrow">01 / About</div><h2>About Me</h2><p class="lead">I combine postgraduate study in translation with practical teaching experience and a strong sense of responsibility in collaborative work.</p></div><div class="cards"><article class="card"><h3>Professional Profile</h3><p>My experience as a temporary teacher has helped me develop classroom communication and student engagement skills. School-based administrative support has also strengthened my attention to detail and ability to handle routine tasks carefully.</p></article><article class="card"><h3>Personal Strengths</h3><p>I am outgoing and friendly, and enjoy communicating and working with others. I approach tasks with a practical attitude, patience, and commitment to completing responsibilities reliably.</p></article></div></div></section>
+<section class="tint" id="education"><div class="wrap"><div class="head"><div class="eyebrow">02 / Education</div><h2>Education</h2><p class="lead">Academic background and current postgraduate studies.</p></div><div class="timeline"><article class="item"><div class="date">Current</div><div><h3>Master's Degree in Translation</h3><div class="place">Xihua University</div><p>First-year postgraduate student, currently pursuing advanced study in translation.</p></div></article><article class="item"><div class="date">Undergraduate</div><div><h3>Undergraduate Studies</h3><div class="place">Chengdu College of Sichuan International Studies University</div><p>Undergraduate institution as listed in my résumé.</p></div></article></div></div></section>
+<section id="experience"><div class="wrap"><div class="head"><div class="eyebrow">03 / Experience</div><h2>Teaching & Work Experience</h2><p class="lead">Experience in teaching and school-related work.</p></div><div class="timeline"><article class="item"><div class="date">Sep 2024 – Jul 2026</div><div><h3>Temporary Teacher</h3><div class="place">Pengxi Secondary Vocational and Technical School</div><p>Worked as a temporary teacher, gaining practical experience in school-based teaching and communication with students.</p></div></article><article class="item"><div class="date">Sep 2023 – Jul 2024</div><div><h3>Temporary Teacher</h3><div class="place">Yuying Middle School</div><p>Worked as a temporary teacher, developing a responsible, student-oriented approach in a school environment.</p></div></article></div><div class="tags"><span class="tag">English Teaching</span><span class="tag">Student Communication</span><span class="tag">Classroom Support</span><span class="tag">Administrative Support</span><span class="tag">Document Organization</span></div></div></section>
+<section class="tint" id="qualifications"><div class="wrap"><div class="head"><div class="eyebrow">04 / Qualifications</div><h2>Certificates & Qualifications</h2><p class="lead">Language qualifications listed in my résumé.</p></div><div class="certs"><div class="cert"><b>TEM-4</b><span>Test for English Majors · Band 4</span></div><div class="cert"><b>CET-4</b><span>College English Test · Band 4</span></div><div class="cert"><b>CET-6</b><span>College English Test · Band 6</span></div><div class="cert"><b>Putonghua</b><span>Level 2 · Grade B</span></div></div></div></section>
+<section id="campus"><div class="wrap"><div class="head"><div class="eyebrow">05 / Campus Involvement</div><h2>Student Leadership</h2></div><article class="card"><h3>Class Study Committee Member</h3><div class="place">Translation Program · Xihua University</div><p>Serve as a class study committee member, supporting communication about academic matters and contributing to a cooperative learning environment.</p></article></div></section>
+<section id="contact"><div class="wrap"><div class="contact"><div><div class="eyebrow" style="color:#c9d9d0">Get in Touch</div><h2>Contact</h2><p>For academic, teaching, or professional opportunities, feel free to get in touch.</p></div><a class="btn secondary" style="border-color:#d4e3dc" href="mailto:1348271063@qq.com">1348271063@qq.com</a></div></div></section>
+</main><footer>© <span id="year">2026</span> Tang Hua · Personal Academic Homepage</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body></html>
